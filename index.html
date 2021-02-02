@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Cafe Open</title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="row clearfix">
+				<img src="images/logo.png" class="logo">
+				<ul class="navbar"  id="check">
+				<li><a href="#">Order</a></li>
+				<li><a href="#">Book a table</a></li>
+				<li><a href="#">sign up</a></li>
+				</ul>
+				<a href="#" class="icon" onclick="slideshow()">
+				<i class="fa fa-bars fa-2x" ></i></a>
+
+			</div>
+		</nav>
+		<div class="main">
+		<h1>Welcome to cafe open.</h1><br>
+		<a class="btn btn-full" href="#">Check our menu</a>
+		<a class="btn btn-full" href="#">Events</a>
+		</div>
+	</header>
+	
+	<script type="text/javascript">
+		function slideshow(){
+				var x= document.getElementById('check');
+				if(x.style.display==='none'){
+						x.style.display='block';
+					}else{
+							x.style.display='none';
+						}
+			}
+	</script>
+</body>
+
+</html>

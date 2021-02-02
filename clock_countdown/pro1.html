@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>clock</title>
+</head>
+<body>
+	<p id="hrs"></p>
+	<p id="min"></p>
+	<p id="sec"></p>
+	<p id="day"></p>
+	<p id="date"></p>
+	<p id="mon"></p>
+		
+	<button onclick="countDown()">set countdown</button>
+<script>
+	const seconds=document.getElementById("sec")
+	const minutes=document.getElementById("min")
+	const hours=document.getElementById("hrs")
+	const day=document.getElementById("day")
+	const d=document.getElementById("date")
+	const mon=document.getElementById("mon")
+	const weekday=["SUN","MON","TUE","WED","THUR","FRI","SAT"];
+	const month=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEPT","OCT","NOV","DEC"];
+	
+	//const btn=document.getElementById("countDown");	
+setInterval(()=>{
+	const date=new Date()
+	d.innerHTML=date.getDate();
+	day.innerHTML=weekday[date.getDay()];
+	seconds.innerHTML=date.getSeconds();
+	minutes.innerHTML=date.getMinutes();
+	hours.innerHTML=date.getHours();
+	mon.innerHTML=month[date.getMonth()];
+	},1000)
+	
+	var countDownDate=prompt("enter the time to countdown to in (yyyy-mm-dd)");
+	const countDown=()=>{
+	const date=new Date()
+	seconds_left=Math.abs(date-new Date())/1000
+	let days=Math.floor(seconds_left/3600/24);
+	let hours=Math.floor(seconds_left/3600)%24;
+	let minutes=Math.floor(seconds_left/60)%60;
+	let sec=Math.floor(seconds_left)%60;
+	console.log(sec)
+	}
+	countDown();
+	setInterval(countDown,1000)
+</script>
+</body>	
+</html>

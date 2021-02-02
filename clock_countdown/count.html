@@ -1,0 +1,20 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+	<script>
+		setInterval(()=>{
+		const demo_date=new Date('2021-01-31');
+		const curr_date=new Date()
+		seconds_left=Math.floor((demo_date-curr_date)/1000)
+		let days=Math.floor(seconds_left/3600/24)
+		let hours=Math.floor(seconds_left/3600)%24
+		let minutes=Math.floor(seconds_left/60)%60;
+	    let sec=Math.floor(seconds_left)%60;
+		console.log(days,hours,minutes,sec);
+	},1000)
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color: #87d7ef;
+	display:flex;
+	flex-wrap: wrap;
+	margin:0;
+}
+.container{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+}
+.notes{
+	background-color:white;
+	margin:20px;
+	height: 400px;
+	width:400px;
+}
+.tools{
+    background-color: lightgreen;
+    display: flex;
+    justify-content: flex-end;
+}
+button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding:5px;
+}
+textarea{
+    width: 100%;
+    height:100%;
+    border: none;
+}
+#newNote{
+    position: fixed;
+    bottom:0px;
+    background: lightsalmon;
+    width: 100%;
+    height: 10%;   
+}
